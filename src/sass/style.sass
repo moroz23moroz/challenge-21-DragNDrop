@@ -1,20 +1,15 @@
 @import 'libs/normalize'
-@import 'base/fonts'
-@import 'base/variables'
-
-html,
-body
-    height: 100%
 
 body
     margin: 0
     display: flex
-    flex-direction: column
     align-items: center
     justify-content: center
-    // background: $dark-color
-    // font-family: $lato
-    // color: $main-color
+    height: 100vh
+    overflow: hidden
+    background-color: steelblue
+    @media (max-width: 800px)
+        flex-direction: column
 
 *
     box-sizing: border-box
@@ -23,34 +18,24 @@ body
 html
     scroll-behavior: smooth
 
-button
-    padding: 0
-    background-color: transparent
-    border: none
+.empty
+    height: 150px
+    width: 150px
+    margin: 10px
+    border: solid 3px black
+    background-color: whitesmoke
 
-h1, h2, h3, h4
-    margin: 0
-    font-weight: normal
+.fill
+    background-image: url('../img/Earth-2.png')
+    height: 145px
+    width: 145px
+    cursor: pointer
+    background-size: cover
 
-img
-    width: auto
-    max-width: 100%
-    height: auto
+.hold
+    border: solid 5px #ccc
 
-iframe, img, svg, video
-    max-width: 100%
-    vertical-align: top
-    height: auto
-
-p
-    margin: 0
-
-ul
-    margin: 0
-    padding-left: 0
-
-li
-    list-style-type: none
-
-a
-    text-decoration: none
+.hovered
+    background-color: #333
+    border-color: whitesmoke
+    border-style: dashed
